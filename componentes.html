@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head> <title> componentes </title>
+       	   <meta charset="UTF-8"/>
+    <script>
+	     function crearDin(){
+		var padre = document.getElementById("padre");
+		var input = document.createElement("INPUT");
+		input.type = 'text';
+	
+		padre.appendChild(input);
+	        } 
+	 	window.onload = function(){
+	
+		var btnAdd = document.getElementById("btn_agregar");
+		btnAdd.onclick = crearDin; 
+		
+		}
+   </script>
+   </head>
+   <body>
+       <div  id="padre" style= color:blue;>
+	<h2> ejemplo </h2>
+	<p>
+	parrafo
+	<span style="color: red;"> span dentro de un parrafo </span>
+	</p>
+       </div>
+   <input type="button" id="btn_agregar" value="agregar cuadro de texto">
+   </body>
+</html>

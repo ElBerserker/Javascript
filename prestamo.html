@@ -1,0 +1,56 @@
+<!--Raul Hernandez Lopez
+freeenergy1975@gmail
+3 de Noviembre del 2020-->
+
+<!DOCTYPE html>
+<!-- Una persona recibe un préstamo de $10,000.00 de un banco y desea saber cuánto pagará de
+interés, si el banco le cobra una tasa del 27% anual.-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prestamo</title>
+        <style>
+        .formato {
+                background-color: rgb(0, 0, 0);
+                color: white;
+                border: 2px solid black;
+                margin:20px;
+                padding: 20px;
+        }
+        </style>
+        </head>
+        <body>
+	<!--Inicio dormulario-->
+        <form type="form" action="">
+	<!--Recopila datos-->
+        prestamo :
+        <input type="text" name="" id="Prestamo">
+	Año de prestamo :
+        <input type="text" name="" id="Fecha_Prestamo">
+	Año actual :
+        <input type="text" name="" id="Fecha_Actual">
+	<!--LLama a la funcion prestam0-->
+        <button type="button" onclick="PrestamO();">Calcular</button>
+	<!--Inicio script-->
+        <script type="text/javascript">
+	//Declaracion de variables 
+	var TIEMPO_TRANSCURRIDO = 0;
+	var TASA_INTERES = 0.27;
+	//inicio de la funcion prestam0
+        function PrestamO(){
+		//Declaracion de variables
+                var PRESTAMO = parseFloat(document.getElementById("Prestamo").value);
+                var FECHA_PRESTAMO = parseInt(document.getElementById("Fecha_Prestamo").value);
+                var FECHA_ACTUAL = parseInt(document.getElementById("Fecha_Actual").value);
+		TIEMPO_TRANSCURRIDO = FECHA_ACTUAL - FECHA_PRESTAMO;                
+ 		//Calcula el monto a pagar anualmente
+                for (var x = 1; x <= TIEMPO_TRANSCURRIDO; x ++){
+                FECHA_PRESTAMO += 1;
+		PRESTAMO = PRESTAMO + (PRESTAMO * TASA_INTERES);		                                
+                alert("Año [" + FECHA_PRESTAMO + "] Monto a pagar [$" + PRESTAMO + "]");
+        	}//Fin ciclo for
+	}//Fin de la funcion prestamo
+        </script><!--Fin script-->
+        </body>
+</html>
+

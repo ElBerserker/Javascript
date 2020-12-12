@@ -1,0 +1,57 @@
+<!-- Raul hernandez lopez(Berserker)
+freeenergy1975@gmail.com
+Martes 18 de agosto del 2020-->
+
+<!--Este programa nos permite calcular la cantidad de dinero que tenemos a partir 
+de una cantidad de billetes y monedas definidos por el usuario, el valor de cada
+moneda y billete tambien es definida por el usuario.-->
+
+<!DOCTYPE> 
+<html>
+	<head>
+		<title>caja registradora</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+	/*inicio del formulario*/
+	<form type="form" action=""> 
+	<label>Cuantos billetes de distinto valor tienes? </label>
+	<input type="text" name="variedadB" id="variedadB">
+	<br />
+	/*boton que hace una llamada a la funcion billetes de javascript*/
+	<button type="button" onclick="billetes();">Enviar</button>
+	/*Fin del formulario*/
+	</form>
+	/*codigo de javascript*/
+	<script type="text/javascript">
+	//Inicio de la funcion billetes
+	function billetes(){
+		//Declaracion de variables haciendo uso del document.get para hacer renfencia 
+		//a los valores introducidos por el usuario 
+		var x, y ;
+		var suma = 0, sumaM = 0;
+		var variedad1 = document.getElementById("variedadB").value;	
+		//procesamiento de datos para calcular el total de dinero que se recabaron de los billetes 	
+		for(x = 1; x <= variedad1; x++){
+			var valor = prompt("Ingrese el valor del billete que tienes :");
+			var cantidad = prompt("Cuantos billetes con ese valor tienes :");
+			
+			suma = suma + ( valor * cantidad );	
+		}
+			var variedadM = prompt("Cuantos Monedas de distinto valor tienes? :"); 
+		//Procesamiento de datos para calcular el total de dinero recabado en monedas
+		for(y = 1; y <= variedadM; y++){
+			var valor2 = prompt("Ingrese la cantidad de monedas que tienes :");
+			var cantidad2 = prompt("Ingresa la cantidad de monedas que tienes con ese valor");
+			sumaM = sumaM + (valor2 * cantidad2);
+		}
+	var total = suma + sumaM;
+	//impresion de resultados
+	console.log("El total de la caja es de : $" + total + " pesos.");
+	document.write("El total de la caja registradora es de :$" + total + " pesos.");
+	alert("El total de la caja resgistradora es de :$" + total + " pesos.");
+	}//Fin de la funcion billetes
+	</script>/*fin javascript*/
+	</body>
+</html>	

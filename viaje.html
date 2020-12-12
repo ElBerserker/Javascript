@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head><title> La curva loca </title> <meta charset="UTF-8"></head>
+	<body>
+	<form type="form" action="">
+	<p>El costo por km de la compañía curva loca es de: $17 pesos</p>
+	<br />
+	A que distacia en kilometros se encuentra tu destino? :
+	<input type="text" name="distancia" id="distancia">
+	<!--LLama a una funcion de javascript-->
+	<button type"button" onclick="viaje();">enviar</button> 
+	</form>
+	<script type="text/javascript">  
+		function viaje(){	
+		//Declaracion de variables
+		var precio = 17;
+		var Distancia = document.getElementById("distancia").value;
+		var costo = precio * Distancia;
+		//Impresion de resultados	
+		alert("\nEl costo de tu boleto es de:$" + costo + " pesos, que"
+		+ "disfrutes tu viaje :D\n");
+		document.write("\nEl costo de tu boleto es de:$" + costo 
+		+ " pesos, que disfrutes tu viaje :D\n");
+		console.log("\nEl costo de tu boleto es de:$" + costo 
+		+ " pesos, que disfrutes tu viaje :D\n");
+	}
+	</script>
+	</body>
+</html>

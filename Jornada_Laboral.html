@@ -1,0 +1,69 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de noviembre del 2020-->
+
+<!--Escriba un algoritmo que, dado el número de horas trabajadas por un empleado y
+el sueldo por hora, calcule el sueldo total de eseempleado.
+Tenga en cuenta que las horas extras se pagan el doble.-->
+
+<!DOCTYPE>
+<html>
+<head>
+    <title>Jornada Laboral</title>
+    <meta charset = "UTF-8">
+  <style>
+      .formato {
+       background-color: white;
+       color: black;
+       border: 2px solid black;
+       margin:530px;
+       padding: 20px;
+       }
+   </style>
+</head>
+<body>
+<form type = "text" action = "">
+    <div class = "formato">
+    <!--Recopila datos-->
+    <h6>Sueldo por hora $</h6>
+    <input type = "text" id = "sueldoHora">
+    <h6>Hora de entrada (formato de 24hrs) :</h6>
+    <input type = "text" id = "horaEntrada">
+    <h6>Hora salida (formato de 24hrs) :</h6>
+    <input type = "text" id = "horaSalida">
+    <br />
+    <br />
+    <!--llama a la funcion Calcular-Sueldo-->
+    <button type = "button" onclick = "Calcular_Sueldo();"> Calcular </button>
+    </div>
+    <script type = "text/javascript"> 
+	function Calcular_Sueldo(){
+	    //Declaracion de variables
+	    var sueldo_hora = document.getElementById('sueldoHora').value;
+	    var hora_entrada = document.getElementById('horaEntrada').value;
+	    var hora_salida = document.getElementById('horaSalida').value;
+	    //Calcula el total de horas laboradas
+	    horas_total = hora_salida - hora_entrada;
+	    //Calcula el monto a cobrar por una jornada de trabajo normal
+	    if(horas_total < 9){
+	   	jornada_normal = sueldo_hora * horas_total;
+		alert("Monto a cobrar $" + jornada_normal);
+  	    }
+	    //Calcula el monto a cobrar por una jornada con horas extras
+	    else if(horas_total > 8){
+		horas_extra = horas_total - 8;
+		extra = sueldo_hora * 2;
+		jornada_extra = (horas_extra * extra) + (sueldo_hora * 8);
+		alert("Monto a cobrar $" + jornada_extra);
+	    }
+	    //despliega una alerta en caso de que los datos introducidos 
+	    //no correspondan
+	    else{
+		alert("Ingresa un dato valido >:v");
+	    }
+	}
+    </script>
+</body>
+</html>
+
+

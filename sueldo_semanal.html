@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabajadores</title>
+        <style>
+        .formato {
+                background-color: rgb(0, 0, 0);
+                color: white;
+                border: 2px solid black;
+                margin:20px;
+                padding: 20px;
+        }
+        </style>
+        </head>
+        <body>
+        <form type="form" action="">
+        Numero de trabajadores :
+        <input type="text" name="numero_trabajadores" id="numero_trabajadores">
+        <button type="button" onclick="Sueldo_Trabajadores();">Calcular</button>
+        <script type="text/javascript">
+	var Horas_Trabajadas, Dias_Trabajados, Pago_Hora, Sueldo_Semanal, Sueldo_Final;
+
+        function Sueldo_Trabajadores(){
+                var Numero_Trabajadores = document.getElementById("numero_trabajadores").value;
+                var Nombres = new Array(Numero_Trabajadores);  
+                 
+                for (var x = 0; x < Numero_Trabajadores; x ++){
+                Nombres[x] = prompt("Nombre:");
+		Pago_Hora = prompt("Pago por hora :");
+		Horas_Trabajadas = prompt("Horas trabajadas por dia :");
+		Dias_Trabajados = prompt("Dias trabjados por semana :");
+		Sueldo_Semanal = (Pago_Hora * Horas_Trabajadas) * Dias_Trabajados;	
+                
+        	        if((Sueldo_Semanal > 0 ) && (Sueldo_Semanal <= 150)){
+			    Sueldo_Final = Sueldo_Semanal * 0.95;
+			     alert("El Sueldo total de " + Nombres[x] +" es de [$"
+                             + Sueldo_Final + "]");
+                 	}
+                        else if((Sueldo_Semanal > 150) && (Sueldo_Semanal < 300)){
+			    Sueldo_Final = Sueldo_Semanal * 0.93;
+                             alert("El Sueldo total de " + Nombres[x] +" es de [$"
+			     + Sueldo_Final + "]");
+                        }
+			 else if((Sueldo_Semanal >= 300) && (Sueldo_Semanal <= 450)){
+                            Sueldo_Final = Sueldo_Semanal * 0.91;
+                             alert("El Sueldo total de " + Nombres[x] +" es de [$"
+                             + Sueldo_Final + "]");
+                        }
+                }
+        }
+        </script>
+        </body>
+</html>
+

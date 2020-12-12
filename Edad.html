@@ -1,0 +1,38 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergfy1975@gmail.com
+10 de Noviemnbre del 2020-->
+
+<!--Obtener la edad de una persona en meses, si se ingresa su edad en años y meses. 
+Ejemplo: Ingresado 3 años 4 meses debe mostrar 40 meses.-->
+
+<!DOCTYPE>
+<html>
+<head>
+   <title>Edad</title>
+   <meta charset = "UTF-8">
+</head>
+<body>
+    <form type = "text" action = "">
+    <h6> Mes de nacimieto (1 - 12):</h6>
+    <input type = "text" id = "mes">
+    <h6> Año de nacimiento, ejemplo (2001):</h6>
+    <input type = "text" id = "years">
+    <h6> Mes Actual (1 - 12):</h6>
+    <input type = "text" id = "mesActual">
+    <h6> Año Actual ejemplo (2010):</h6>
+    <input type = "text" id = "yearActual">
+    <button type = "button" onclick = "CalcularEdad();"> Calcular </button>
+    
+    <script type = "text/javascript">
+	function CalcularEdad(){
+	   var mes_nacimiento = document.getElementById('mes').value;
+	   var year_nacimiento = document.getElementById('years').value;
+	   var mes_actual = document.getElementById('mesActual').value;
+	   var year_actual = document.getElementById('yearActual').value;
+	   edad_meses = (mes_actual - mes_nacimiento) + ((year_actual - year_nacimiento) * 12);
+	   alert("Tu edad es de " + edad_meses + " meses");
+	}
+   </script>
+</body>
+</html>
+

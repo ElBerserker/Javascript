@@ -1,0 +1,35 @@
+<!--RAÚL HERNÁŃDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de noviembre del 2020-->
+
+<!--Calcular el descuento y el monto a pagar por un medicamento cualquiera en una farmacia 
+si todos los medicamentos tienen un descuento del 35%.-->
+
+<!DOCTYPE>
+<html>
+<head>
+<title>Farmacia</title>
+<body>
+<form type = "text" action = "">
+    <!--Recopila datos-->
+    Nombre del medicamento : 
+    <input type = "text" id = "nombreMedicamento">
+    Precio real del medicamento : 
+    <input type = "text" id = "precioMedicamento">
+    <button type = "button" onclick = "CalcularPrecio();"> Calcular </button>
+    </form>
+    
+    <script type = "text/javascript">
+	var descuento = 0.25;
+	var monto_a_pagar;
+
+	function CalcularPrecio(){
+	    var nombre_medicamento = document.getElementById('nombreMedicamento').value;
+	    var precio_medicamento = document.getElementById('precioMedicamento').value;
+	    monto_a_pagar = precio_medicamento * descuento;
+	    alert("Monto a pagar $" + monto_a_pagar );
+	}
+    </script>
+</body>
+<html>    
+  

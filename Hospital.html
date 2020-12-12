@@ -1,0 +1,40 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de Noviembre del 2020-->
+
+<!--En un hospital existen 3 áreas: Urgencias, Pediatría y Traumatología.
+El presupuesto anual del manera: Pediatría 42% y Traumatología 21%.-->
+
+<!DOCTYPE>
+<html>
+<head>
+   <title> Hospital </title>
+   <meta charset = "UTF-8">
+</head>
+<body>
+   <form type = "text" action = "" >
+   <!--Recopila datos-->
+   Ingresa el presupuesto total :
+   <input type = "text" id = "presupuestoTotal">
+   <!--LLama a la funcion CalcularPresupuesto-->
+   <button type = "button" onclick = "CalcularPresupuesto();">Calcular</button>
+  </form>
+  <script type = "text/javascript"> 
+	//Inicio de la funcion CalcularPresupuesto
+	function CalcularPresupuesto(){
+	    //Declaracion de variables
+	    var presupuesto_total = document.getElementById('presupuestoTotal').value;
+	    //Definicion de la Distribucion del presupuesto por area
+            presupuesto_pediatria = presupuesto_total * 0.42;
+	    presupuesto_traumatologia = presupuesto_total * 0.12;
+	    presupuesto_urgencias = presupuesto_total - (presupuesto_pediatria + presupuesto_traumatologia);
+	    //impresion de resultados
+	    alert("La distribucion del presupuesto queda de la siguiente manera\n" 
+	    + "Presupuesto Pediatria $" + presupuesto_pediatria 
+	    + "\nPresupuesto Traumatologia $" + presupuesto_traumatologia
+	    + "\nPresupuesto Urgencias $" + presupuesto_urgencias); 	
+	}//Fin de la funcion
+   </script><!--Fin del script-->
+</body>
+</html>
+

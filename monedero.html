@@ -1,0 +1,73 @@
+<!--Raul Hernandez Lopez
+freeenergy1975@gmail.com 
+modificado 9 de noviembre del 2020-->
+
+<!--Escriba un algoritmo que dada la cantidad de monedas de 5-10-20 pesos
+, diga la cantidad de dinero que se tiene en total.-->
+
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title>Monedero</title>
+		<!--establecemos una clase que contendra un formato que se utilizara 
+		mas adelamte en las diviciones-->
+		<style>
+			.formato {
+			background-color: rgb(0, 0, 0);
+			color: white;
+			border: 2px solid black;
+			margin:20px;
+			padding: 20px;
+			}
+		</style>
+	</head> 
+	<body>
+		<form type="form" action="">
+			<!--crea una divicion que contendra una tabla en el cual se
+			encuentra el formulario por el cual se llevara a cabo la 
+			recoleccion de datos-->  
+			<div class="formato">
+			<table>
+				<tr>
+				<th> Monedas de $5:
+				<input type="text" id="cinco"> </th>
+				<br />
+				<th> Monedas de $10:
+				<input type="text" id="diez"> </th>
+				<br />
+				<th> Billetes de $20:
+				<input type="text" id="veinte"></th>
+				<br />
+				<th> Billetes de $50:
+				<input type="text" id="cincuenta"></th>
+				<br />
+				<th> Billetes de $100:
+				<input type="text" id="cien"></th>
+				<br />
+				<!--Creacion de un boton para mandar a llamar a la 
+				funcion monedero en javascript-->
+				<th>
+				 <button type="button" onclick="monedero();">Calcular</button>
+				</th>
+				</tr>
+			</table>
+			</form>
+			<script type="text/javascript">
+			//Inicio de la funcion monedero
+			function monedero(){
+				//declaracion de variables
+				var Cinco = document.getElementById("cinco").value;
+				var Diez = document.getElementById("diez").value;
+				var Veinte = document.getElementById("veinte").value;
+				var Cincuenta = document.getElementById("cincuenta").value;
+				var Cien = document.getElementById("cien").value;
+				//Calcula la suma de los valores dentro del monedero
+				var Total = (Cinco * 5) + (Diez * 10) + (Veinte * 20) 
+				+ (Cincuenta * 50) + (Cien * 100);
+				
+				//Inpresion de resultados 
+				alert("El total de tu monedero es de :$" + Total);
+			}//fin de la funcion monedero
+			</script>
+</html>

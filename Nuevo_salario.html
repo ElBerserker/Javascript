@@ -1,0 +1,44 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de noviembre del 2020-->
+
+<!--Calcular el nuevo salario de un empleado si obtuvo un incremento del 8%
+sobre su salario actual y un descuento de 2.5% por servicios.-->
+
+<!DOCTYPE>
+<html>
+<head>
+<title>Aumento</title>
+<meta charset = "UTF-8">
+</title>
+<body>
+    <form type = "text" action = "" >
+    <!--recopila datos-->
+    Ingresa tu sueldo actual: 
+    <input type = "text" id = "salarioActual">
+    <!--llama a la funcion CalcularSueldo-->
+    <button type = "button" onclick = "CalcularSueldo();">CALCULAR</button>
+    </form>
+
+    <script type = "text/javascript">
+	//inicio funcion CalcularSueldo 
+	function CalcularSueldo(){
+	    //Declaracion de variables
+	    var descuento;
+	    var salarioNuevo;
+	    var salarioFinal;
+	    //parseamos la variable salario_actual a float
+	    var salario_actual = parseFloat(document.getElementById('salarioActual').value);
+	    //Definicion del salario con el aunmento, salario aunmetado menos el descuento
+	    //y el salario final.
+	    salarioNuevo = salario_actual + (salario_actual * 0.08);
+	    descuento = salarioNuevo * 0.025;
+	    salarioFinal = salarioNuevo - descuento;
+	    //Impresion de resultados
+	    alert("Se te otorgo un aumento del 8% sobre tu salario actual");
+	    alert("tu salario con aumento es de $" +salarioNuevo + "menos el 2.5%" );
+	    alert("Monto a cobrar $" + salarioFinal); 
+	}//fin de la funcion CalcularSueldo
+    </script>
+</body>
+</html>

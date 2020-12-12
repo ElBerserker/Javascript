@@ -1,0 +1,95 @@
+<!--Raul_Hernandez Lopez
+freeenergy1975@gmail.com -->
+
+<!DOCTYPE html>
+<html>
+	<head> <title> BICICLETA </title> <meta charset="UTF-8"></head>
+	<!-- creacion de la clase que le dara un toque personal a la pagina -->
+	<style>
+		.formato {
+		background-color: orange;
+		color: black;
+		border: 2px solid black;
+		margin: 20px;
+		padding: 20px;
+		}
+	</style>
+	<body>
+	<form type="form" action="">
+	   <div  class="formato">
+		<!-- Inicio de nuestra tabla-->
+		<table>	
+		<tr><h1> Calcular el tiempo que tardaste en hacer un recorrido </h1></tr>
+		    <tr>
+			<br /><br />
+			<th>A que velocidad(km/hr) realizaste tu recorrido? :
+			<input type="text" name="velocidad1" id="velocidad1">
+			</th>
+			<br /><br />
+				<th>Cual es la distancia en kilometros que recorriste? :
+			<input type="text" name="distancia1" id="distancia1">
+			</th>
+			<th><button type="button" onclick="tiempot();">Calcular</button>
+		     </tr>
+		</table>
+	   </div>	
+	   <div class="formato">
+		<table>
+		 <tr><h1> Calcular la distancia que recorriste </h1></tr>
+                    <tr>
+                        <br /><br />
+                        <th>A que velocidad(km/hr) realizaste tu recorrido? :
+			<input type="text" name="velocidad2" id="velocidad2">
+			</th>
+                        <br /><br />
+                        <th>En cuanto tiempo realizaste tu recorrido ? :
+			<input type="text" name="tiempo2" id="tiempo2"></th>
+			<th><button type="button" onclick="distanciad();">calcular</button> 
+			</th>
+                     </tr>
+		</table>
+	   </div>
+	   <div class="formato">
+		<table>
+		 <tr><h1> Calcular la velocidad con la que realizaste tu recorrido </h1></tr>
+                    <tr>
+                        <br /><br />
+                        <th> Que distancia recorriste (km)? :
+			<input type="text" name="distancia3" id="distancia3">
+			</th>
+                        <br /><br />
+                        <th>Cuanto tiempo en hrs tardaste en dar tu recorrido ? :
+			<input type="text" name="tiempo3" id="tiempo3">
+			</th>
+			<th> <button type="button" onclick="velocidadv();">calcular</button> </th>
+                     </tr>
+
+		</table>
+		<!-- Fin de tabla -->
+		
+	</form>
+	<script type="text/javascript">	
+		//Funcion que calcula el tiempo 
+		function tiempot(){
+			var Velocidad = document.getElementById("velocidad1").value;
+			var Distancia = document.getElementById("distancia1").value;
+			var Tiempo = Distancia/Velocidad ;	
+		alert("El tiempo que tardaste en realizar tu recorrido es de" + Tiempo + " hrs");
+		}
+		//funcion que calula la distancia
+		function distanciad(){
+			var Velocidad2 = document.getElementById("velocidad2").value; 
+                        var Tiempo2 = document.getElementById("tiempo2").value;	
+			var Distancia2 = Velocidad2 * Tiempo2;
+		alert("la distancia que recorriste es de :" + Distancia2 + " Km");
+		}
+		//funcion que calcual la velocidad
+		function velocidadv(){
+			var Distancia3 = document.getElementById("distancia3").value;
+			var Tiempo3 = document.getElementById("tiempo3").value;
+			var Velocidad3 = Distancia3 / Tiempo3;
+		alert("La velocidad con la que realizaste tu recorrido es de :" + Velocidad3 + " km/hr") ; 
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+28 de octubre del 2020-->
+
+<!-- Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas
+el vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por 
+las tres ventas que realiza en el mes y el total que recibirá en el mes tomando
+en cuenta su sueldo base y comisiones. -->
+
+<!DOCTYPE>
+<html>
+<head>
+<title> Programa vendedor </title>
+<meta charset = "UTF-8">
+<head>
+<body>
+<form type = "form" action = "">
+    <!-- Recopilacion de datos por formulario -->
+   Ingresa tu sueldo actual : 
+   <input type = "text" id = "sueldo_fijo">
+   <br />
+   Ingresa el numero de ventas que realizaste durante el mes :
+   <input type = "text" id = "numero_ventas">
+   <br />
+   <!-- llama a la funcion CalcularSueldo -->
+   <button type = "button" onclick="CalcularSueldo();"> Calcular </button>
+</form>
+<!-- inicio del metodo CalcularSueldo -->
+<script type = "text/javascript">
+   function CalcularSueldo(){
+	//Declaracion de variables 
+	var venta = 0;
+	var sueldo_total = 0;
+	var comision = 0;
+	var sueldo_fijo = document.getElementById("sueldo_fijo").value;
+	var numero_ventas = document.getElementById("numero_ventas").value;
+	for (x = 0; x < numero_ventas; x++){
+	   venta = prompt("Ingresa el monto de la venta"); 
+           comision = comision + (venta * 0.10);		
+	}//Fin For	
+   sueldo_total = comision + sueldo_fijo;
+   alert("El monto recabado por concepto de ventas es de [$" + comision + "]");
+   alert("Monto a cobrar [$" + sueldo_total + "]");
+   }
+   </script>
+</body>
+</html>
+

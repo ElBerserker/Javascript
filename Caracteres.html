@@ -1,0 +1,40 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de Noviemnre del 2020-->
+
+<!--Leer tres números enteros de un Digito y almacenarlos en una sola variable que 
+contenga a esos tres dígitos Por ejemplo si A=5 y B=6 y C=2 entonces X=562-->
+
+<!DOCTYPE>
+<html>
+<head>
+<title> Caracteres </title>
+<meta charset = "UTF-8">
+<head>
+<body>
+<form type = "text" action = "">
+    <!--Recopila datos-->
+    <h6>Ingresa un numero entre el 1 y el 9<h6>
+    <input type = "text" id = "numeroUno">
+    <h6>Ingresa un numero entre el 1 y el 9</h6>
+    <input type = "text" id = "numeroDos">
+    <h6>Ingresa un numero enter el 1 y el 9</h6>
+    <input type = "text" id = "numeroTres">
+    <!--LLama a la funcion ConcatenarCaracteres-->
+    <button type = "button" onclick = "ConcatenarCaracteres();">Calcular</button>
+<form>
+<script type = "text/javascript">
+    function ConcatenarCaracteres(){
+	//Declaracion de variables
+	var numero_uno = document.getElementById('numeroUno').value;
+	var numero_dos = document.getElementById('numeroDos').value;
+	var numero_tres = document.getElementById('numeroTres').value;
+	//Concatena los valores
+	valores_concatenados = numero_uno + numero_dos + numero_tres;
+	//Impresion de resultados
+	alert("los valores concatenados son :" + valores_concatenados);
+    }
+</script>
+</body>
+</html>
+

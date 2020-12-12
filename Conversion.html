@@ -1,0 +1,46 @@
+<!-- RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+3 de noviembre del 2020 -->
+
+<!--Calcular el cambio de monedas en dólares y euros al ingresar cierta cantidad en pesos. 
+(Tipo de cambio Euros:22.50 ).-->
+
+<!DOCTYPE>
+<html>
+<head>
+<title> Conversion de monedas </title>
+<meta charset = "UTF-8">
+</head>
+<body>
+<form type = "text" action = "">
+   <!--Recopila datos-->
+   Ingresa el numero de pesos que tengas :
+   <input type = "text" id = "pesos">
+   <!--Despliega un menu-->
+   <select name = "seleccion" id = "seleccion">
+	<option value = "1"> Dolares </option>
+	<option value = "2"> Euros </option>
+   </select>
+   <!--LLama a la funcion conversion-->
+   <button type = "button" onclick="conversion();"> Convertir </button>
+   </form>
+   
+   <script type = "text/javascript">
+	function conversion(){
+	   var seleccion_valor = document.getElementById('seleccion').value;	
+	   var pesos_valor = document.getElementById('pesos').value;
+	   dolares = 22.09;
+	   euros = 21.91;
+	   //calcula el monto segun la decision del usuario
+	   if(seleccion_valor == 1){
+	      conversion_dolares = pesos_valor / dolares;
+	      alert("el numero de pesos que posee es igual a " + conversion_dolares);
+	   }
+	   else if(seleccion_valor == 2){
+	      conversion_euros = pesos_valor / euros;
+	      alert("El numero de pesos que posees es igual a " + conversion_euros);
+	   }		
+	}
+   </script>
+</body>
+</html>

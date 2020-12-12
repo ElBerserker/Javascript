@@ -1,0 +1,30 @@
+<!-- RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+28 de octubre del 2020 -->
+
+<!-- Calcula el precio de un boleto de viaje, tomando en cuenta el número de kilómetros
+que se van a recorrer. El precio por Kilometro es de $20.50 -->
+
+<!DOCTYPE>
+<html>
+<head>
+<title> Boletos </title>
+<meta charset = "UTF-8">
+</head>
+<form type = "text" action = "">
+   Distancia en km de tu destino :
+   <input type = "text" id = "kilometros">
+   <button type="button" onclick="GetPrecio();"> calcular </button>
+</form>
+<!-- llamada a la funcion GetPrecio -->
+<script type = "text/javascript">
+   function GetPrecio(){
+	//Declaracion de variables
+	var kilometros = document.getElementById("kilometros").value;    
+	var costo = 20.5;
+	var precio_viaje = kilometros * costo;
+	alert("El costo de tu boleto es de $" + precio_viaje);
+   }
+</script>
+</body>
+<html>

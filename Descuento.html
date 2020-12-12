@@ -1,0 +1,35 @@
+<!--RAÚL HERNÁNDEZ LÓPEZ
+freeenergy1975@gmail.com
+9 de octubre del 2020-->
+
+<!--Calcular el nuevo salario de un empleado si se le descuenta el 20% de su salario actual-->
+
+<!DOCTYPE>
+<html>
+<head>
+<title> Descuento </title>
+<meta charset = "UTF-8">
+</head>
+<body>
+    <form type = "text" action = "">
+    <!--Recopila datos-->
+    <h6>Ingresa el monto de tu salario actual :<h6>
+    <input type = "text" id = "salarioActual">
+    <!--Hace lalmada a la funcion Calcular descuento-->
+    <button type = "button" onclick = "CalcularDescuento();"> Calcular </button>
+<script type = "text/javascript">
+    //Inicio de la funcion CalcualarDescueto
+    function CalcularDescuento(){
+	//Declaracion de variables
+	var sueldo_actual = document.getElementById('salarioActual').value;
+	//Calcula el valor del sueldo despues del descuento
+	sueldo_final = sueldo_actual * 0.80;
+	//Inprime resultados
+	alert("Monto a cobrar despues del descuento $" + sueldo_final);
+    }
+</script>
+</body>
+</html>
+
+
+   

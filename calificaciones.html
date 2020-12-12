@@ -1,0 +1,68 @@
+<!--Raul hernandez lopez(Berserker)
+freeenergy1975@gmail.com
+Lunes 17 de agosto del 2020-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> calificaciones </title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<form action="" id="form">
+		<label> Cual fue tu calificacion?</label>
+		<br />
+		<br />
+		<!--Despliega una serie de opciones de acuerdo a la calificacion ontenida-->
+		<select name="calificacion" id="calificacion">
+			<option value = "1" > 10 </option>
+			<option value = "2"> 9 </option>
+			<option value = "3"> 8 </option>
+			<option value = "4"> 7 o 6 </option>
+			<option value = "5"> 5 o menos </option>
+		</select>
+		<br />
+		<br />
+		<!--crea un boton que hace llamada a una funcion de javascript-->
+		<button type="button" onclick="calificaciones();">Enviar</button>
+		</form>
+		<!--codigo de javascript-->
+		<script type"text/javascript">
+			//inicio de la funcion calificaciones
+			function calificaciones (){
+				//declaracion de variables haciendo uso de del document.getElementById
+				//para obtener los valores ingresados por el usuario
+				var seleccion = document.getElementById("calificacion").value;
+				var mensaje = "Tu calificacion es: ";
+				//creacion de condicionales para determinar el mensaje que se le mostrara al usuario
+				if(seleccion == 1){
+					console.log( mensaje + " 'A' bien echo!");
+					document.write( mensaje + " 'A' bien echo!");
+					alert( mensaje + " 'A' bien echo! ");
+				}
+				else if(seleccion == 2){
+					console.log( mensaje + " 'B' sigue asi!");
+					document.write( mensaje + " 'B' sigue asi! ");
+					alert( mensaje + " 'B' sigue asi!");
+				}
+				else if(seleccion == 3){
+					console.log( "T u calificacion es 'C' puedes mejorar , animo! ");
+					document.write( mensaje + " 'C' Puedes mejorar, animio! ");
+					alert(mensaje + " 'C' Puedes mejorar, animo!");
+				}
+				else if(seleccion == 4){
+					console.log( "Tu calificacion es D nunca es tarde para hacer lo correcto sigue adelante!");
+					document.write( mensaje + " 'D' nunca es tarde para hacer lo correcto sigue adelante!");
+					alert( mensaje + " 'D' nunca es tarde para hacer lo correcto, animo!");
+				}
+				else if(seleccion == 5){
+					console.log( "Tu calificacion es F pinche inutil!");
+					document.write( mensaje + " 'F' pinche inutil!");
+					alert( mensaje + " 'F' piche inutil!");
+				}	
+			}//Fin de la funcion calificaciones
+		</script>
+		</body>
+</html>
